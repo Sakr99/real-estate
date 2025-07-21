@@ -1,7 +1,10 @@
 
 const Projects = () => {
   return (
-    <div className="grid grid-cols-4 gap-4 p-10 items-center bg-gray-500">
+    <div
+      
+      className="  grid grid-cols-4 gap-4 p-10 items-center bg-gray-500"
+    >
       <img
         src="https://realestate.eg/storage/developers/F9WZJXdR213lgKUF.jpg"
         alt="Project"

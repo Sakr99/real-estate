@@ -1,4 +1,5 @@
-import Banaar from "./components/Banaar";
+import About from "./components/About";
+import Banner from "./components/Banner";
 import Footer from "./components/Footer";
 import GroupCards from "./components/GroupCards";
 import Navbar from "./components/Navbar"
@@ -8,10 +9,13 @@ function App() {
   return (
     <main>
       <Navbar />
-      <Banaar />
-      <GroupCards />
-      <Projects />
-      <Footer />
+      <div className="py-4 ">
+        <Banner />
+        <GroupCards />
+        <About />
+        <Projects />
+        <Footer />
+      </div>
     </main>
   );
 }

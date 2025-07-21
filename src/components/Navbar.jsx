@@ -1,16 +1,12 @@
 import { useState } from "react";
 import logo from "../assets/WhatsApp Image 2025-02-19 at 20.21.10_0390877b.jpg";
-import { X, Menu } from "lucide-react"; // أيقونات جاهزة
+import { X, Menu } from "lucide-react";
 
 const category = [
-  { name: "الصفحة الرئيسية" },
-  { name: "العقارات المعروضة" },
-  { name: "طلب تسويق الوحدة" },
-  { name: "عن الشركة" },
-  { name: "طلب استفسار عن مشروع" },
-  { name: "تعرف على المشروعات" },
-  { name: "المدونة" },
-  { name: "تواصل معنا" },
+  { name: "العقارات المعروضة" , href: "#properties"  },
+  { name: "طلب تسويق الوحدة" , href: "https://wa.me/201000219106", target: "_blank", rel: "noopener noreferrer"  },
+  { name: "عن الشركة" , href: "#about"  },
+  { name: "تواصل معنا" , href: "https://wa.me/201000219106", target: "_blank", rel: "noopener noreferrer" },
 ];
 
 const Navbar = () => {
@@ -18,21 +14,18 @@ const Navbar = () => {
 
   return (
     <>
-      {/* Navbar الرئيسي */}
       <div className="flex justify-between items-center bg-white shadow-md px-4 md:px-16 rounded-b-lg relative">
         <div>
           <img className="w-28 h-20" src={logo} alt="logo" />
         </div>
-        {/* روابط - تظهر فقط في الشاشات المتوسطة وفوق */}
-        <div className="hidden sm:flex gap-3 text-black text-[10px] font-bold">
+        <div className="hidden sm:flex gap-3 text-black text-sm  font-bold">
           {category.map((item, index) => (
-            <a key={index} className="hover:text-yellow-700" href="#">
+          <a key={index} className="hover:text-yellow-700" href={item.href} target={item.target} rel={item.rel}>
               {item.name}
             </a>
           ))}
         </div>
 
-        {/* زر الهامبرجر - يظهر فقط في الشاشات الصغيرة */}
         <button
           className="sm:hidden text-black"
           onClick={() => setSidebarOpen(true)}
@@ -41,7 +34,6 @@ const Navbar = () => {
         </button>
       </div>
 
-      {/* Overlay خلفي عند فتح السايدبار */}
       {sidebarOpen && (
         <div
           className="fixed inset-0 bg-black bg-opacity-30 z-40"
@@ -49,7 +41,6 @@ const Navbar = () => {
         />
       )}
 
-      {/* السايدبار */}
       <div
         className={`fixed top-0 right-0 h-full w-64 bg-white shadow-lg z-50 transform transition-transform duration-300 ${
           sidebarOpen ? "translate-x-0" : "translate-x-full"
@@ -67,7 +58,9 @@ const Navbar = () => {
             <a
               key={index}
               className="hover:text-yellow-700 border-b pb-2"
-              href="#"
+              href={item.href}
+              target={item.target}
+              rel={item.rel}
               onClick={() => setSidebarOpen(false)}
             >
               {item.name}
