@@ -3,6 +3,7 @@ import logo from "../assets/WhatsApp Image 2025-02-19 at 20.21.10_0390877b.jpg";
 import { X, Menu } from "lucide-react";
 
 const category = [
+  { name: "الصفحة الرئيسية" , href: "/" },
   { name: "العقارات المعروضة" , href: "#properties"  },
   { name: "طلب تسويق الوحدة" , href: "https://wa.me/201000219106", target: "_blank", rel: "noopener noreferrer"  },
   { name: "عن الشركة" , href: "#about"  },
