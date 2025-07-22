@@ -21,7 +21,7 @@ export default function About() {
               </div>
             </div>
             <div className="max-w-lg md:max-w-none">
-              <p className="mt-4 text-gray-700">
+              <p className="mt-4 text-sm text-gray-700">
                 أحمد صقر هو أحد الأسماء البارزة في مجال التسويق العقاري، بخبرة
                 ميدانية وإدارية تمتد لأكثر من 13 عامًا، تدرّج خلالها في عدة
                 مناصب داخل شركات محلية وعالمية، وشارك في إطلاق وإدارة عدد من
